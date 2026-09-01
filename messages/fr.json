@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "siteName": "Cabinet d'Avocat Dr. Hossam Loutfi",
+    "siteNameShort": "Cabinet Loutfi"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "Le cabinet",
+    "practice": "Domaines d'intervention",
+    "news": "Actualités",
+    "achievements": "Réalisations",
+    "media": "Médias",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer",
+    "openMenu": "Ouvrir le menu",
+    "adminOpen": "Administration"
+  },
+  "hero": {
+    "eyebrow": "Conseil juridique en Égypte",
+    "titleEm": "Dr. Hossam Loutfi",
+    "titleSub": "Cabinet d'avocat",
+    "intro": "Une pratique juridique discrète, rigoureuse et réfléchie. Le cabinet conseille les particuliers, les familles et les entreprises sur les affaires qui leur importent le plus, avec précision et discrétion.",
+    "primaryCta": "Contacter le cabinet",
+    "secondaryCta": "En savoir plus",
+    "scroll": "Défiler pour explorer"
+  },
+  "home": {
+    "leadTitle": "Une approche mesurée du droit",
+    "leadBody": "Le cabinet repose sur la clarté, la préparation et l'intégrité. Le travail est mené avec méthode, dans la langue et le contexte de chaque client.",
+    "statLegal": "Domaines d'intervention",
+    "statOffices": "Bureaux",
+    "statIntegrity": "Intégrité",
+    "statAbout": "Pratique moderne",
+    "sectionTitle": "Un cabinet de droit au Caire et à Gizeh",
+    "sectionBody": "Le cabinet est implanté en Égypte, avec des bureaux à Dokki, à Bab El Louk et à Gizeh. Il accompagne une clientèle nationale et internationale dans un large éventail de matières juridiques.",
+    "practiceTitle": "Domaines d'intervention",
+    "newsTitle": "Actualités & commentaires",
+    "newsCta": "Voir toutes les actualités",
+    "achievementsTitle": "Réalisations",
+    "achievementsCta": "Voir les réalisations",
+    "visitTitle": "Visiter le cabinet",
+    "visitCta": "Page contact"
+  },
+  "about": {
+    "eyebrow": "Le cabinet",
+    "title": "À propos",
+    "introTitle": "Introduction",
+    "philosophyTitle": "Philosophie du cabinet",
+    "approachTitle": "Approche professionnelle",
+    "presenceTitle": "Implantation",
+    "areasTitle": "Domaines d'intervention",
+    "profileTitle": "Dr. Hossam Loutfi",
+    "profileIntro": "Le cabinet est dirigé par Dr. Hossam Loutfi. Le contenu biographique détaillé est administré par le cabinet et apparaîtra ici dès sa publication.",
+    "contactCta": "Contacter le cabinet"
+  },
+  "practice": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Domaines d'intervention",
+    "intro": "Le cabinet conseille sur un large éventail de questions juridiques. Les domaines ci-dessous sont gérés via l'administration du contenu — certains restent en attente de confirmation.",
+    "empty": "Les domaines d'intervention sont en préparation. Revenez bientôt.",
+    "needsConfirmation": "En attente de confirmation",
+    "all": "Tous",
+    "contactCta": "Évoquer un dossier"
+  },
+  "news": {
+    "eyebrow": "Actualités & commentaires",
+    "title": "Actualités",
+    "intro": "Actualités et commentaires du cabinet. Le contenu est administré par le cabinet.",
+    "featured": "À la une",
+    "latest": "Dernières",
+    "readMore": "Lire la suite",
+    "back": "Retour aux actualités",
+    "published": "Publié",
+    "empty": "Aucune actualité n'a encore été publiée.",
+    "notFound": "Cet article est introuvable.",
+    "share": "Partager"
+  },
+  "achievements": {
+    "eyebrow": "Reconnaissance & activité",
+    "title": "Réalisations",
+    "intro": "Un relevé d'activité et de reconnaissance professionnelle. Chaque élément est saisi et validé par le cabinet.",
+    "empty": "Aucune réalisation n'a encore été publiée.",
+    "view": "Voir",
+    "types": {
+      "AWARD": "Distinction",
+      "CONFERENCE": "Conférence",
+      "PUBLICATION": "Publication",
+      "ARTICLE": "Article",
+      "MEDIA": "Média",
+      "INTERVIEW": "Entretien",
+      "LECTURE": "Conférence",
+      "MILESTONE": "Jalon"
+    }
+  },
+  "media": {
+    "eyebrow": "Presse & en ligne",
+    "title": "Médias",
+    "intro": "Entretiens, apparitions et publications sélectionnés par le cabinet.",
+    "empty": "Aucun média n'a encore été publié.",
+    "watch": "Regarder",
+    "read": "Lire",
+    "open": "Ouvrir"
+  },
+  "careers": {
+    "eyebrow": "Rejoindre le cabinet",
+    "title": "Carrières",
+    "intro": "Le cabinet accueille les étudiants motivés et les professionnels qualifiés.",
+    "tabs": {
+      "training": "Candidature stage",
+      "job": "Candidature emploi"
+    },
+    "training": {
+      "heading": "Candidature stage",
+      "subtext": "Candidaturez-vous au stage. Renseignez les informations essentielles, le cabinet vous contactera.",
+      "fullName": "Nom complet",
+      "university": "Université",
+      "academicYear": "Année d'études",
+      "phone": "Numéro de téléphone",
+      "email": "Adresse e-mail",
+      "experience": "Expérience / Stages",
+      "linkedin": "LinkedIn",
+      "motivation": "Pourquoi souhaitez-vous effectuer un stage ici ?",
+      "yearOptions": {
+        "first": "Première année",
+        "second": "Deuxième année",
+        "third": "Troisième année",
+        "fourth": "Quatrième année",
+        "graduate": "Diplômé",
+        "postgraduate": "Postgraduate"
+      }
+    },
+    "job": {
+      "heading": "Candidature emploi",
+      "subtext": "Candidaturez-vous à un poste au sein du cabinet. Renseignez les informations essentielles, le cabinet vous contactera.",
+      "fullName": "Nom complet",
+      "university": "Université",
+      "phone": "Numéro de téléphone",
+      "email": "Adresse e-mail",
+      "linkedin": "LinkedIn",
+      "experience": "Expérience / Stages antérieurs",
+      "motivation": "Pourquoi souhaitez-vous travailler ici ?"
+    },
+    "builder": {
+      "initial": "Expérience / Stage 1",
+      "add": "Ajouter",
+      "remove": "Retirer",
+      "organization": "Organisation",
+      "duration": "Durée",
+      "description": "Description"
+    },
+    "privacy": {
+      "title": "Vos informations",
+      "body": "Les informations transmises sont utilisées à des fins de recrutement et de stage uniquement. Le cabinet pourra vous contacter au sujet de votre candidature. Elles sont conservées de manière sécurisée et vous confirmez qu'elles sont exactes."
+    },
+    "consent": "J'accepte que le cabinet traite mes informations à des fins de recrutement et de stage.",
+    "submit": "Envoyer la candidature",
+    "submitting": "Envoi…",
+    "success": "Votre candidature a bien été reçue. Le cabinet vous contactera bientôt.",
+    "invalidResume": "Veuillez corriger les champs signalés.",
+    "error": "La candidature n'a pas pu être envoyée. Veuillez réessayer dans un instant."
+  },
+  "contact": {
+    "eyebrow": "Nous contacter",
+    "title": "Contact",
+    "intro": "Le cabinet est joignable par chacun de ses bureaux. Contactez-nous par téléphone, par courriel ou via les liens cartographiques ci-dessous.",
+    "officesTitle": "Bureaux du cabinet",
+    "mainLines": "Lignes principales",
+    "fax": "Fax",
+    "mobile": "Téléphone mobile",
+    "email": "E-mail",
+    "mapLink": "Voir la carte",
+    "call": "Appeler",
+    "address": "Adresse"
+  },
+  "footer": {
+    "brand": "DR. HOSSAM LOUTFI",
+    "offices": "Bureaux",
+    "contact": "Contact",
+    "navigation": "Navigation",
+    "languages": "Langues",
+    "rights": "Tous droits réservés.",
+    "admin": "Administration"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "contact": "Contacter le cabinet",
+    "viewAll": "Voir tout",
+    "loading": "Chargement…",
+    "noResults": "Aucun résultat.",
+    "backHome": "Retour à l'accueil",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "required": "Obligatoire"
+  },
+  "admin": {
+    "title": "Administration",
+    "login": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "dashboard": "Tableau de bord",
+    "applications": "Candidatures",
+    "training": "Candidatures stage",
+    "jobs": "Candidatures emploi",
+    "news": "Actualités",
+    "achievements": "Réalisations",
+    "media": "Médias",
+    "practice": "Domaines d'intervention",
+    "offices": "Bureaux",
+    "settings": "Réglages du site",
+    "new": "Nouveau",
+    "contacted": "Contacté",
+    "accepted": "Accepté",
+    "rejected": "Rejeté",
+    "save": "Enregistrer",
+    "saveDraft": "Enregistrer le brouillon",
+    "publish": "Publier",
+    "unpublish": "Dépublier",
+    "delete": "Supprimer",
+    "feature": "Mettre en avant",
+    "unfeature": "Retirer de la une",
+    "edit": "Modifier",
+    "create": "Créer",
+    "confirmDelete": "Confirmez-vous la suppression ?",
+    "export": "Exporter CSV",
+    "search": "Rechercher…",
+    "empty": "Aucun élément.",
+    "back": "Retour"
+  }
+}

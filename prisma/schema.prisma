@@ -1,0 +1,169 @@
+// Dr. Hossam Loutfi Law Firm — Database schema.
+//
+// The schema is intentionally portable between SQLite (local sandbox) and
+// PostgreSQL (production). Enum-like values are stored as constrained strings
+// to keep the same schema usable across both providers.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("ADMIN") // ADMIN | EDITOR
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Application {
+  id           String       @id @default(cuid())
+  type         String // TRAINING | JOB
+  fullName     String
+  university   String
+  academicYear String? // TRAINING only
+  phone        String
+  email        String
+  linkedin     String?
+  motivation   String?
+  status       String       @default("NEW") // NEW | CONTACTED | ACCEPTED | REJECTED
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  experiences  Experience[]
+}
+
+model Experience {
+  id            String      @id @default(cuid())
+  applicationId String
+  organization  String
+  duration      String
+  description   String
+  order         Int         @default(0)
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+}
+
+model News {
+  id            String   @id @default(cuid())
+  slugEn        String   @unique
+  slugAr        String   @unique
+  slugFr        String   @unique
+  titleEn       String
+  titleAr       String
+  titleFr       String
+  excerptEn     String
+  excerptAr     String
+  excerptFr     String
+  contentEn     String
+  contentAr     String
+  contentFr     String
+  image         String?
+  author        String?
+  publishedAt   DateTime?
+  published     Boolean  @default(false)
+  featured      Boolean  @default(false)
+  seoTitleEn    String?
+  seoTitleAr    String?
+  seoTitleFr    String?
+  seoDescEn     String?
+  seoDescAr     String?
+  seoDescFr     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Achievement {
+  id            String   @id @default(cuid())
+  titleEn       String
+  titleAr       String
+  titleFr       String
+  descriptionEn String
+  descriptionAr String
+  descriptionFr String
+  type          String   @default("MILESTONE") // AWARD | CONFERENCE | PUBLICATION | ARTICLE | MEDIA | INTERVIEW | LECTURE | MILESTONE
+  image         String?
+  url           String?
+  date          DateTime?
+  featured      Boolean  @default(false)
+  published     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model PracticeArea {
+  id            String   @id @default(cuid())
+  nameEn        String
+  nameAr        String
+  nameFr        String
+  descriptionEn String
+  descriptionAr String
+  descriptionFr String
+  icon          String?
+  image         String?
+  order         Int      @default(0)
+  published     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Media {
+  id         String   @id @default(cuid())
+  titleEn    String
+  titleAr    String
+  titleFr    String
+  url        String
+  mediaType  String   @default("VIDEO") // VIDEO | ARTICLE | OTHER
+  youtubeId  String?
+  thumbnail  String?
+  published  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model OfficeLocation {
+  id        String   @id @default(cuid())
+  nameEn    String
+  nameAr    String
+  nameFr    String
+  addressEn String
+  addressAr String
+  addressFr String
+  mapUrl    String?
+  phones    String?
+  email     String?
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                     String   @id @default(cuid())
+  firmNameEn             String   @default("DR. HOSSAM LOUTFI")
+  firmNameAr             String   @default("د. حسام لطفي")
+  firmNameFr             String   @default("DR. HOSSAM LOUTFI")
+  taglineEn              String   @default("")
+  taglineAr              String   @default("")
+  taglineFr              String   @default("")
+  contactEmail           String   @default("hloutfi@loutfilawfirm.net")
+  mainPhones             String   @default("")
+  faxPhones              String   @default("")
+  mobilePhone            String   @default("")
+  socialLinks            String   @default("{}")
+  footerEn               String   @default("")
+  footerAr               String   @default("")
+  footerFr               String   @default("")
+  defaultSeoTitleEn      String   @default("DR. HOSSAM LOUTFI LAW FIRM")
+  defaultSeoTitleAr      String   @default("مكتب د. حسام لطفي للمحاماة")
+  defaultSeoTitleFr      String   @default("CABINET D'AVOCAT DR. HOSSAM LOUTFI")
+  defaultSeoDescEn       String   @default("")
+  defaultSeoDescAr       String   @default("")
+  defaultSeoDescFr       String   @default("")
+  updatedAt              DateTime @updatedAt
+}

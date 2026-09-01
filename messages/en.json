@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "siteName": "Dr. Hossam Loutfi Law Firm",
+    "siteNameShort": "HL Law Firm"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "practice": "Practice Areas",
+    "news": "News",
+    "achievements": "Achievements",
+    "media": "Media",
+    "careers": "Careers",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "adminOpen": "Administration"
+  },
+  "hero": {
+    "eyebrow": "Legal Counsel in Egypt",
+    "titleEm": "Dr. Hossam Loutfi",
+    "titleSub": "Law Firm",
+    "intro": "A discreet, rigorous and considered legal practice. The firm advises individuals, families and businesses on the matters that matter most, with precision and discretion.",
+    "primaryCta": "Contact the Firm",
+    "secondaryCta": "Learn More",
+    "scroll": "Scroll to explore"
+  },
+  "home": {
+    "leadTitle": "A considered approach to the practice of law",
+    "leadBody": "The firm is built on clarity, preparation and integrity. Work is conducted in a measured manner, in the language and context of each client.",
+    "statLegal": "Areas of practice",
+    "statOffices": "Offices",
+    "statIntegrity": "Integrity",
+    "statAbout": "Modern practice",
+    "sectionTitle": "A senior legal practice in Cairo and Giza",
+    "sectionBody": "The firm is based in Egypt with offices in Dokki, Bab El Louk and Giza. It serves a national and international clientele across a broad range of legal matters.",
+    "practiceTitle": "Areas of practice",
+    "newsTitle": "News & Commentary",
+    "newsCta": "View all news",
+    "achievementsTitle": "Achievements",
+    "achievementsCta": "View achievements",
+    "visitTitle": "Visit the firm",
+    "visitCta": "Contact page"
+  },
+  "about": {
+    "eyebrow": "The Firm",
+    "title": "About the Firm",
+    "introTitle": "Introduction",
+    "philosophyTitle": "Firm Philosophy",
+    "approachTitle": "Professional Approach",
+    "presenceTitle": "Office Presence",
+    "areasTitle": "Areas of Work",
+    "profileTitle": "Dr. Hossam Loutfi",
+    "profileIntro": "The practice is led by Dr. Hossam Loutfi. Detailed biography content is managed through the firm's administration and will appear here once published.",
+    "contactCta": "Contact the firm"
+  },
+  "practice": {
+    "eyebrow": "What we do",
+    "title": "Practice Areas",
+    "intro": "The firm advises across a spectrum of legal matters. The areas below are managed through the firm's content administration — some may still be awaiting confirmation.",
+    "empty": "Practice areas are being prepared. Please check back shortly.",
+    "needsConfirmation": "Awaiting confirmation",
+    "all": "All",
+    "contactCta": "Discuss a matter"
+  },
+  "news": {
+    "eyebrow": "News & Commentary",
+    "title": "News",
+    "intro": "Updates and commentary from the firm. Content is managed through the firm's administration.",
+    "featured": "Featured",
+    "latest": "Latest",
+    "readMore": "Read more",
+    "back": "Back to news",
+    "published": "Published",
+    "empty": "No news has been published by the firm yet.",
+    "notFound": "This article could not be found.",
+    "share": "Share"
+  },
+  "achievements": {
+    "eyebrow": "Recognition & Activity",
+    "title": "Achievements",
+    "intro": "A record of professional activity and recognition. Every item here is entered and approved by the firm.",
+    "empty": "Achievements have not been published yet.",
+    "view": "View",
+    "types": {
+      "AWARD": "Award",
+      "CONFERENCE": "Conference",
+      "PUBLICATION": "Publication",
+      "ARTICLE": "Article",
+      "MEDIA": "Media",
+      "INTERVIEW": "Interview",
+      "LECTURE": "Lecture",
+      "MILESTONE": "Milestone"
+    }
+  },
+  "media": {
+    "eyebrow": "In the Press & Online",
+    "title": "Media",
+    "intro": "Interviews, appearances and publications curated by the firm.",
+    "empty": "Media has not been published yet.",
+    "watch": "Watch",
+    "read": "Read",
+    "open": "Open"
+  },
+  "careers": {
+    "eyebrow": "Join the practice",
+    "title": "Careers",
+    "intro": "The firm welcomes motivated students and qualified professionals.",
+    "tabs": {
+      "training": "Training Application",
+      "job": "Apply for a Job"
+    },
+    "training": {
+      "heading": "Training Application",
+      "subtext": "Apply as an intern. Complete the essential information and the firm will contact you.",
+      "fullName": "Full Name",
+      "university": "University",
+      "academicYear": "Academic Year",
+      "phone": "Phone Number",
+      "email": "Email",
+      "experience": "Experience / Internships",
+      "linkedin": "LinkedIn",
+      "motivation": "Why do you want to intern here?",
+      "yearOptions": {
+        "first": "First Year",
+        "second": "Second Year",
+        "third": "Third Year",
+        "fourth": "Fourth Year",
+        "graduate": "Graduate",
+        "postgraduate": "Postgraduate"
+      }
+    },
+    "job": {
+      "heading": "Apply for a Job",
+      "subtext": "Apply for a position with the firm. Complete the essential information and the firm will contact you.",
+      "fullName": "Full Name",
+      "university": "University",
+      "phone": "Phone Number",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "experience": "Previous Experience / Internships",
+      "motivation": "Why do you want to work here?"
+    },
+    "builder": {
+      "initial": "Experience / Internship 1",
+      "add": "Add",
+      "remove": "Remove",
+      "organization": "Organization",
+      "duration": "Duration",
+      "description": "Description"
+    },
+    "privacy": {
+      "title": "Your information",
+      "body": "The information you submit is used for recruitment and training purposes only. The firm may contact you regarding your application. It is stored securely, and you agree that the details you provide are accurate."
+    },
+    "consent": "I agree that the firm may process my information for recruitment and training purposes.",
+    "submit": "Submit Application",
+    "submitting": "Submitting…",
+    "success": "Your application has been received. The firm will be in touch soon.",
+    "invalidResume": "Please correct the highlighted fields.",
+    "error": "The application could not be submitted. Please try again shortly."
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Contact",
+    "intro": "The firm may be reached through any of its offices. Please call, email or use the map links below.",
+    "officesTitle": "Office Locations",
+    "mainLines": "Main Telephone Lines",
+    "fax": "Fax",
+    "mobile": "Office Mobile",
+    "email": "Email",
+    "mapLink": "Open map",
+    "call": "Call",
+    "address": "Address"
+  },
+  "footer": {
+    "brand": "DR. HOSSAM LOUTFI",
+    "offices": "Offices",
+    "contact": "Contact",
+    "navigation": "Navigation",
+    "languages": "Languages",
+    "rights": "All rights reserved.",
+    "admin": "Admin"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "contact": "Contact the Firm",
+    "viewAll": "View all",
+    "loading": "Loading…",
+    "noResults": "No results yet.",
+    "backHome": "Back to home",
+    "close": "Close",
+    "open": "Open",
+    "required": "Required"
+  },
+  "admin": {
+    "title": "Administration",
+    "login": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "dashboard": "Dashboard",
+    "applications": "Applications",
+    "training": "Training Applications",
+    "jobs": "Job Applications",
+    "news": "News",
+    "achievements": "Achievements",
+    "media": "Media",
+    "practice": "Practice Areas",
+    "offices": "Office Locations",
+    "settings": "Site Settings",
+    "new": "New",
+    "contacted": "Contacted",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "save": "Save",
+    "saveDraft": "Save draft",
+    "publish": "Publish",
+    "unpublish": "Unpublish",
+    "delete": "Delete",
+    "feature": "Feature",
+    "unfeature": "Unfeature",
+    "edit": "Edit",
+    "create": "Create",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "export": "Export CSV",
+    "search": "Search…",
+    "empty": "No items found.",
+    "back": "Back"
+  }
+}
