@@ -1,11 +1,27 @@
 import { DatabaseSync } from "node:sqlite";
 import path from "node:path";
+import os from "node:os";
 import fs from "node:fs";
 import { SCHEMA_SQL } from "./schema";
+import { bootstrapPlaceholders } from "./bootstrap";
+
+function isVercelRuntime() {
+  return process.env.VERCEL === "1" || process.env.VERCEL === "true";
+}
 
 function resolveDbPath() {
+  // Vercel's serverless filesystem is read-only except for the temp directory.
+  // The existing data layer is node:sqlite, so on Vercel we keep SQLite and place
+  // the file in a writable location. The schema/seed bootstrap runs once per warm
+  // instance, so pages render placeholder content on a fresh deployment.
+  if (isVercelRuntime()) {
+    const url = process.env.DATABASE_URL?.trim() || "";
+    if (url.startsWith("file:") && url.slice(5) === ":memory:") return ":memory:";
+    return path.join(os.tmpdir(), "loutfilawfirm.db");
+  }
+
   const url = process.env.DATABASE_URL || "file:./prisma/dev.db";
-  const bare = url.replace(/^file:/, "");
+  const bare = url.startsWith("file:") ? url.slice(5) : url;
   if (bare === ":memory:") return ":memory:";
   const base = path.resolve(/* turbopackIgnore: true */ process.cwd(), bare);
   return base;
@@ -82,6 +98,7 @@ export function getDb(): DB {
         // Column already exists.
       }
     }
+    bootstrapPlaceholders(db);
     globalForDb.__hlDb = db;
   }
   return globalForDb.__hlDb;
