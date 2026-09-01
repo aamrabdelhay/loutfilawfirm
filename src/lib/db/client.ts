@@ -7,7 +7,7 @@ function resolveDbPath() {
   const url = process.env.DATABASE_URL || "file:./prisma/dev.db";
   const bare = url.replace(/^file:/, "");
   if (bare === ":memory:") return ":memory:";
-  const base = path.resolve(process.cwd(), bare);
+  const base = path.resolve(/* turbopackIgnore: true */ process.cwd(), bare);
   return base;
 }
 
