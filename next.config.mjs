@@ -4,7 +4,9 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  // Vercel's Next.js 16.3 adapter is incompatible with `output: "standalone"`.
+  // Standalone is only needed for self-hosted deployments, so disable it on Vercel.
+  ...(process.env.VERCEL ? {} : { output: "standalone" }),
   reactStrictMode: true,
   experimental: {
     serverActions: {
