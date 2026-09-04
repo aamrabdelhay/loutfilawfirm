@@ -16,16 +16,14 @@ Premium multilingual website for **Dr. Hossam Loutfi Law Firm** — Arabic, Engl
 ## Running locally
 
 ```bash
-npm install        # if needed
-npm run db:seed    # creates SQLite DB, admin user, offices, gallery
-npm run dev        # http://localhost:3000
+npm install
+npm run db:seed
+npm run dev
 ```
 
 Admin login: `http://localhost:3000/admin/login`
 
-Default seeded credentials (change them):
-- Email: `admin@loutfilawfirm.net`
-- Password: `Admin123!`
+The admin login uses **password only**. Set `ADMIN_PASSWORD` in the environment for the production password. The requested fallback password is `hl` when the environment variable is not configured.
 
 ## Public site structure
 
