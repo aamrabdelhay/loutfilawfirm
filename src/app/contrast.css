@@ -1,0 +1,54 @@
+/* Contrast safeguards for copy rendered over photography / dark imagery. */
+
+.image-readable h1,
+.image-readable h2,
+.image-readable h3,
+.image-readable p,
+.image-readable span,
+.image-readable a,
+.image-readable label {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
+}
+
+.image-readable .btn-solid,
+.image-readable .btn-glass {
+  text-shadow: none;
+}
+
+.image-readable .btn-glass {
+  background: rgba(11, 18, 32, 0.62);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.image-readable .btn-glass:hover {
+  background: rgba(11, 18, 32, 0.78);
+}
+
+/* Home hero: keep text readable even when the CMS hero image is unusually bright. */
+section[class*="min-h-[92vh]"] > .absolute:first-child {
+  background: rgba(11, 18, 32, 0.16);
+}
+
+section[class*="min-h-[92vh]"] h1,
+section[class*="min-h-[92vh]"] p,
+section[class*="min-h-[92vh]"] span,
+section[class*="min-h-[92vh]"] a {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.62);
+}
+
+section[class*="min-h-[92vh]"] .btn-solid,
+section[class*="min-h-[92vh]"] .btn-glass {
+  text-shadow: none;
+}
+
+/* Image-backed burgundy CTA: preserve button/text contrast on light photos. */
+section[class*="bg-[var(--burgundy)]"] h2,
+section[class*="bg-[var(--burgundy)]"] p,
+section[class*="bg-[var(--burgundy)]"] a {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.58);
+}
+
+section[class*="bg-[var(--burgundy)]"] .btn-glass {
+  text-shadow: none;
+  background: rgba(11, 18, 32, 0.48);
+}
