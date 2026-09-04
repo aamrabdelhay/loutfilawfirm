@@ -77,8 +77,7 @@ export async function SiteFooter({
                 ))}
               </div>
               <div className="text-white/50">
-                {tc("fax")}{" "}
-                {settings.faxPhones.split(",").map((p) => p.trim()).join(" · ")}
+                {tc("fax")} {settings.faxPhones.split(",").map((p) => p.trim()).join(" · ")}
               </div>
               <div className="text-white/50">
                 {tc("mobile")} {settings.mobilePhone}
@@ -112,10 +111,15 @@ export async function SiteFooter({
 
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/45">
           <span>{new Date().getFullYear()} © DR. HOSSAM LOUTFI LAW FIRM — {year}</span>
-          <a href="/admin/login" className="inline-flex items-center gap-2 hover:text-white/80">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
-            {t("admin")}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+            <span className="text-[10px] tracking-[0.12em] text-white/40">
+              Designed &amp; Developed by <span className="text-[var(--gold)]">Amr Abdelhay</span>
+            </span>
+            <a href="/admin/login" className="inline-flex items-center gap-2 hover:text-white/80">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
+              {t("admin")}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
