@@ -17,7 +17,7 @@ export function LoginForm({ next }: { next?: string }) {
     startTransition(async () => {
       const res = await loginAction(form);
       if (!res.ok) {
-        setError("Email or password is incorrect.");
+        setError("Password is incorrect.");
         return;
       }
       router.push(next && next.startsWith("/admin") ? next : "/admin");
@@ -42,20 +42,6 @@ export function LoginForm({ next }: { next?: string }) {
           </p>
         ) : null}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            className="w-full rounded-[var(--radius-small)] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder:text-white/40 focus:border-[var(--gold)] focus:outline-none"
-            placeholder="admin@loutfilawfirm.net"
-          />
-        </div>
-        <div>
           <label htmlFor="password" className="block text-sm font-medium text-white/80 mb-2">
             Password
           </label>
@@ -65,6 +51,7 @@ export function LoginForm({ next }: { next?: string }) {
             type="password"
             required
             autoComplete="current-password"
+            autoFocus
             className="w-full rounded-[var(--radius-small)] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder:text-white/40 focus:border-[var(--gold)] focus:outline-none"
             placeholder="••••••••"
           />
