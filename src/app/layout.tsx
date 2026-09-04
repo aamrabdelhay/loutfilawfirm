@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import { fontVariables, fontLinks } from "@/lib/fonts";
 import "./globals.css";
+import "./contrast.css";
 import { getSettings } from "@/lib/db/repo";
 
 export const metadata: Metadata = {
