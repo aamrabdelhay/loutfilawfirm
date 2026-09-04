@@ -12,7 +12,7 @@ export function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative bg-[var(--navy)] text-white overflow-hidden">
+    <section className="image-readable relative bg-[var(--navy)] text-white overflow-hidden">
       <div className="absolute inset-0 opacity-25">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,137,82,0.35),transparent_55%)]" />
       </div>
