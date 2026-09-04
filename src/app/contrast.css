@@ -8,6 +8,6 @@ section[class*="min-h-[92vh]"] h1,section[class*="min-h-[92vh]"] p,section[class
 section[class*="min-h-[92vh]"] .btn-solid,section[class*="min-h-[92vh]"] .btn-glass{ text-shadow:none; }
 section[class*="bg-[var(--burgundy)]"] h2,section[class*="bg-[var(--burgundy)]"] p,section[class*="bg-[var(--burgundy)]"] a{ text-shadow:0 2px 14px rgba(0,0,0,.58); }
 section[class*="bg-[var(--burgundy)]"] .btn-glass{ text-shadow:none; background:rgba(11,18,32,.48); }
-/* Footer credit is intentionally flat and high-contrast; no glow/shimmer. */
-footer .footer-credit{ color:rgba(255,255,255,.62); text-shadow:none; letter-spacing:.08em; }
-footer .footer-credit strong{ color:#C9A96E; font-weight:500; text-shadow:none; }
+/* Footer credit: flat, refined, readable — no glow. */
+footer span[class*="text-[var(--gold)]"]{ color:#C9A96E !important; text-shadow:none !important; font-weight:500; }
+footer div[class*="border-t"] > div > span:first-child{ color:rgba(255,255,255,.68); text-shadow:none; }
