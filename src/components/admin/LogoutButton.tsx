@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { logoutAction } from "@/app/actions/auth";
 import { LogOut } from "lucide-react";
 
-export function LogoutButton() {
+export function LogoutButton({ label = "Logout" }: { label?: string }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
 
@@ -17,12 +17,12 @@ export function LogoutButton() {
       onClick={() =>
         startTransition(async () => {
           await logoutAction();
-          router.push("/admin/login");
+          router.push("/");
           router.refresh();
         })
       }
     >
-      <LogOut size={13} /> Logout
+      <LogOut size={13} /> {pending ? "…" : label}
     </button>
   );
 }
