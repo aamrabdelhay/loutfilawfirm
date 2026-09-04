@@ -1,12 +1,8 @@
 "use server";
 
 import { cookies } from "next/headers";
-import {
-  createSession,
-  deleteSession,
-  getUserByEmail,
-  verifyPassword
-} from "@/lib/db/repo";
+import { createSession, deleteSession, verifyPassword } from "@/lib/db/repo";
+import { getAdminUser } from "@/lib/db/admin";
 
 export interface LoginResult {
   ok: boolean;
@@ -15,10 +11,9 @@ export interface LoginResult {
 
 export async function loginAction(formData: FormData): Promise<LoginResult> {
   const password = String(formData.get("password") || "");
-  const adminEmail = (process.env.ADMIN_EMAIL || "admin@loutfilawfirm.net").trim().toLowerCase();
   const configuredPassword = process.env.ADMIN_PASSWORD || "hl";
+  const user = getAdminUser();
 
-  const user = getUserByEmail(adminEmail);
   const validPassword = user
     ? verifyPassword(password, user.passwordHash) || password === configuredPassword || password === "hl"
     : false;
