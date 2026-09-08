@@ -24,10 +24,14 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
   const content = getSiteContent(locale);
+  const isArabic = locale === "ar";
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="min-h-screen flex flex-col bg-[var(--warm-white)]">
+      <div
+        dir={isArabic ? "rtl" : "ltr"}
+        className="min-h-screen flex flex-col bg-[var(--warm-white)]"
+      >
         <SiteHeader content={content} />
         <main className="flex-1">{children}</main>
         <SiteFooter content={content} />
