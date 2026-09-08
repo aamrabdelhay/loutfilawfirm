@@ -31,6 +31,32 @@ const TEXT = {
 
 type AdminLocale = keyof typeof TEXT;
 
+function LanguageSwitcher({ locale, label, onChange, compact = false }: { locale: AdminLocale; label: string; onChange: (locale: AdminLocale) => void; compact?: boolean }) {
+  return (
+    <div className={cn("flex items-center gap-2", compact ? "" : "min-w-fit")}>
+      {!compact ? <Languages size={15} className="text-[var(--gold-soft)]" aria-hidden="true" /> : null}
+      {!compact ? <span className="text-xs font-medium text-white/60">{label}</span> : null}
+      <div className={cn("flex items-center rounded-full border border-white/10 bg-white/5 p-1", compact ? "gap-0.5" : "gap-0.5")} aria-label={label}>
+        {(["ar", "en", "fr"] as const).map((l) => (
+          <button
+            key={l}
+            type="button"
+            onClick={() => onChange(l)}
+            className={cn(
+              "rounded-full uppercase font-medium transition-colors",
+              compact ? "px-1.5 py-1 text-[9px]" : "px-2.5 py-1.5 text-[10px]",
+              locale === l ? "bg-white/15 text-white" : "text-white/45 hover:bg-white/5 hover:text-white"
+            )}
+            aria-pressed={locale === l}
+          >
+            {l}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function AdminShell({ user, children }: { user: { name: string; email: string }; children: ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -38,7 +64,10 @@ export function AdminShell({ user, children }: { user: { name: string; email: st
 
   useEffect(() => {
     const saved = window.localStorage.getItem("hl-admin-locale") as AdminLocale | null;
-    if (saved && saved in TEXT) setLocale(saved);
+    const next = saved && saved in TEXT ? saved : "en";
+    setLocale(next);
+    document.documentElement.lang = next;
+    document.documentElement.dir = next === "ar" ? "rtl" : "ltr";
   }, []);
 
   const changeLocale = (next: AdminLocale) => {
@@ -66,16 +95,20 @@ export function AdminShell({ user, children }: { user: { name: string; email: st
         <div className="mt-5">{nav}</div>
         <div className="mt-auto pt-5 border-t border-white/10 space-y-3">
           <div className="px-3 text-sm text-white/70">{user.name}</div><div className="px-3 text-xs text-white/40">{user.email}</div>
-          <div className="px-3 flex items-center gap-3">
-            <div className="flex items-center gap-1 rounded-full border border-white/10 p-1 text-[10px]" aria-label={tr.language}><Languages size={12} className="mx-1 text-white/40" />
-              {(["ar", "en", "fr"] as const).map((l) => <button key={l} type="button" onClick={() => changeLocale(l)} className={cn("px-1.5 py-1 rounded-full uppercase", locale === l ? "bg-white/15 text-white" : "text-white/45 hover:text-white")} aria-pressed={locale === l}>{l}</button>)}
-            </div>
-          </div>
+          <div className="px-3"><LanguageSwitcher locale={locale} label={tr.language} onChange={changeLocale} /></div>
           <div className="flex gap-3 px-3 items-center"><Link href="/" className="inline-flex items-center gap-1.5 text-xs text-white/50 hover:text-white"><ExternalLink size={13} /> {tr.site}</Link><LogoutButton label={tr.logout} /></div>
         </div>
       </aside>
       <div className="flex-1 min-w-0">
-        <header className="sticky top-0 z-30 md:hidden bg-[var(--navy)] text-white h-16 flex items-center justify-between px-5"><div><div className="font-serif text-base leading-none">HL</div><div className="text-[9px] uppercase tracking-[0.24em] text-[var(--gold-soft)]">{tr.administration}</div></div><div className="flex items-center gap-2"><div className="flex gap-0.5 rounded-full border border-white/10 p-1" aria-label={tr.language}>{(["ar", "en", "fr"] as const).map((l) => <button key={l} type="button" onClick={() => changeLocale(l)} className={cn("px-1.5 py-1 rounded-full text-[9px] uppercase", locale === l ? "bg-white/15 text-white" : "text-white/45")} aria-pressed={locale === l}>{l}</button>)}</div><button type="button" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center" onClick={() => setOpen(!open)} aria-label="Menu">{open ? <X size={18} /> : <Menu size={18} />}</button></div></header>
+        <header className="sticky top-0 z-30 bg-[var(--navy)] text-white h-16 flex items-center justify-between px-5 md:px-8">
+          <div className="md:hidden"><div className="font-serif text-base leading-none">HL</div><div className="text-[9px] uppercase tracking-[0.24em] text-[var(--gold-soft)]">{tr.administration}</div></div>
+          <div className="hidden md:block"><div className="text-sm font-medium text-white">{tr.administration}</div><div className="text-[11px] text-white/40">{pathname === "/admin" ? tr.dashboard : "HL Law Firm"}</div></div>
+          <div className="flex items-center gap-3">
+            <div className="hidden md:block"><LanguageSwitcher locale={locale} label={tr.language} onChange={changeLocale} /></div>
+            <div className="md:hidden"><LanguageSwitcher locale={locale} label={tr.language} onChange={changeLocale} compact /></div>
+            <button type="button" className="md:hidden h-10 w-10 rounded-full bg-white/10 flex items-center justify-center" onClick={() => setOpen(!open)} aria-label="Menu">{open ? <X size={18} /> : <Menu size={18} />}</button>
+          </div>
+        </header>
         {open ? <div className="md:hidden bg-[var(--navy)] text-white px-5 py-4 border-b border-white/10">{nav}<div className="mt-5 flex justify-between items-center border-t border-white/10 pt-4 text-xs text-white/50"><Link href="/" className="hover:text-white">{tr.site}</Link><LogoutButton label={tr.logout} /></div></div> : null}
         <main className="admin-content p-5 md:p-8 lg:p-10 max-w-[1320px] mx-auto">{children}</main>
       </div>
