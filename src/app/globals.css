@@ -45,9 +45,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-[dir="rtl"] body,
-[dir="rtl"] {
+[dir="rtl"] body {
   letter-spacing: 0;
+  text-align: right;
+}
+
+[dir="ltr"] body {
+  text-align: left;
 }
 
 h1,
@@ -70,6 +74,14 @@ h6 {
 [dir="rtl"] h5,
 [dir="rtl"] h6 {
   letter-spacing: 0;
+}
+
+[dir="rtl"] body :where(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,td,th,label) {
+  text-align: right;
+}
+
+[dir="ltr"] body :where(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,td,th,label) {
+  text-align: left;
 }
 
 a {
