@@ -1,0 +1,37 @@
+/* Admin-only typography direction. Keep this scoped so the public site is unaffected. */
+.admin-rtl .admin-content {
+  direction: rtl;
+  text-align: right;
+}
+
+.admin-ltr .admin-content {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Important admin page/section titles stay centered. */
+.admin-content h1,
+.admin-content h2 {
+  text-align: center;
+}
+
+/* Form controls follow the selected writing direction. */
+.admin-rtl .admin-content input,
+.admin-rtl .admin-content textarea,
+.admin-rtl .admin-content select {
+  direction: rtl;
+  text-align: right;
+}
+
+.admin-ltr .admin-content input,
+.admin-ltr .admin-content textarea,
+.admin-ltr .admin-content select {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Explicit button/link alignment remains controlled by their own component styles. */
+.admin-content button,
+.admin-content [role="button"] {
+  text-align: center;
+}
