@@ -53,7 +53,7 @@ export default async function RootLayout({
           <link key={l.href} rel={l.rel} href={l.href} />
         ))}
       </head>
-      <body>{children}</body>
+      <body style={{ textAlign: "start" }}>{children}</body>
     </html>
   );
 }
