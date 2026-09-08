@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { fontVariables, fontLinks } from "@/lib/fonts";
 import "./globals.css";
 import "./contrast.css";
+import "./admin.css";
 import { getSettings } from "@/lib/db/repo";
 
 export const metadata: Metadata = {
